@@ -46,5 +46,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
 size_t binary_tree_nodes(const binary_tree_t *tree);
+int binary_tree_is_full(const binary_tree_t *tree);
+int binary_tree_is_perfect(const binary_tree_t *tree);
 
 #endif /* _BINARY_TREES_H_ */

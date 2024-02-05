@@ -52,6 +52,7 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 int binary_tree_is_descendant(const binary_tree_t *ancestor, const binary_tree_t *node);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
 

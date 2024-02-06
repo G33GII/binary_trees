@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 
 /**
  * struct binary_tree_s - Binary tree node
@@ -29,9 +30,11 @@ typedef struct binary_tree_s binary_tree_t;
 /* typedef struct binary_tree_s avl_t; */
 /* typedef struct binary_tree_s heap_t; */
 
+int is_bst_util(const binary_tree_t *tree, int min, int max);
 size_t max(size_t a, size_t b);
 void binary_tree_delete(binary_tree_t *tree);
 void binary_tree_print(const binary_tree_t *);
+int binary_tree_is_bst(const binary_tree_t *tree);
 int binary_tree_balance(const binary_tree_t *tree);
 int binary_tree_is_root(const binary_tree_t *node);
 int binary_tree_is_leaf(const binary_tree_t *node);

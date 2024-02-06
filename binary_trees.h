@@ -25,13 +25,12 @@ struct binary_tree_s
 };
 
 typedef struct binary_tree_s binary_tree_t;
+typedef struct binary_tree_s bst_t;
+typedef struct binary_tree_s avl_t;
+typedef struct binary_tree_s heap_t;
 
-/* typedef struct binary_tree_s bst_t; */
-/* typedef struct binary_tree_s avl_t; */
-/* typedef struct binary_tree_s heap_t; */
-
-int is_bst_util(const binary_tree_t *tree, int min, int max);
 size_t max(size_t a, size_t b);
+bst_t *bst_insert(bst_t **tree, int value);
 void binary_tree_delete(binary_tree_t *tree);
 void binary_tree_print(const binary_tree_t *);
 int binary_tree_is_bst(const binary_tree_t *tree);
@@ -51,6 +50,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 int binary_tree_is_complete(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+int is_bst_util(const binary_tree_t *tree, int min, int max);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
